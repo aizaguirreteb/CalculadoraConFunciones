@@ -62,6 +62,7 @@ Funcion mostrarMenu
 	Escribir "** 4- División               **"
 	Escribir "** 5- Ecuación 1º Grado      **"
 	Escribir "** 6- Ecuación 2º Grado      **"
+	Escribir "** 7- Salir                  **"
 	Escribir "*******************************"
 FinFuncion
 
@@ -70,47 +71,55 @@ FinFuncion
 Algoritmo Calculadora
 	definir option como entero
 	
-	mostrarMenu
+	Repetir
+		Limpiar Pantalla
+		mostrarMenu
+		
+		Leer option
+		Segun option Hacer
+			1:
+				Escribir "Introduce los sumandos: "
+				Leer A
+				Leer B
+				Escribir "La suma de " A " y " B " es: " suma(A,B)
+			2:
+				Escribir "Introduce los sustraendos: "
+				Leer A
+				Leer B
+				Escribir "La resta de " A " y " B " es: " resta(A,B)
+			3:
+				Escribir "Introduce los factores: "
+				Leer A
+				Leer B
+				Escribir "La multiplicación de " A " y " B " es: " multiplicacion(A,B)
+			4: 
+				Escribir "Introduce el dividendo: "
+				Leer A
+				Escribir "Introduce el divisor: "
+				Leer B
+				Escribir "El cociente de " A " y " B " es: " cociente(A,B)
+			5:
+				Escribir "Introduce el coeficiente A: "
+				Leer A
+				Escribir "Introduce el coeficiente B: "
+				Leer B
+				Escribir "La solución de la ecuación de primer grado " A "x + " B " = 0 es x= "  primerGrado(A,B)
+			6:
+				Escribir "Introduce el coeficiente A: "
+				Leer A
+				Escribir "Introduce el coeficiente B: "
+				Leer B
+				Escribir "Introduce el coeficiente C: "
+				Leer C
+				segundoGrado(A,B,C)
+			7: 
+				Escribir "Gracias, vuelva pronto"
+			De Otro Modo:
+				Escribir "Opción no válida"
+		Fin Segun
+		Escribir "Pulse enter para continuar"
+		Esperar Tecla
+	Hasta Que option == 7
 	
-	Leer option
-	Segun option Hacer
-		1:
-			Escribir "Introduce los sumandos: "
-			Leer A
-			Leer B
-			Escribir "La suma de " A " y " B " es: " suma(A,B)
-		2:
-			Escribir "Introduce los sustraendos: "
-			Leer A
-			Leer B
-			Escribir "La resta de " A " y " B " es: " resta(A,B)
-		3:
-			Escribir "Introduce los factores: "
-			Leer A
-			Leer B
-			Escribir "La multiplicación de " A " y " B " es: " multiplicacion(A,B)
-		4: 
-			Escribir "Introduce el dividendo: "
-			Leer A
-			Escribir "Introduce el divisor: "
-			Leer B
-			Escribir "El cociente de " A " y " B " es: " cociente(A,B)
-		5:
-			Escribir "Introduce el coeficiente A: "
-			Leer A
-			Escribir "Introduce el coeficiente B: "
-			Leer B
-			Escribir "La solución de la ecuación de primer grado " A "x + " B " = 0 es x= "  primerGrado(A,B)
-		6:
-			Escribir "Introduce el coeficiente A: "
-			Leer A
-			Escribir "Introduce el coeficiente B: "
-			Leer B
-			Escribir "Introduce el coeficiente C: "
-			Leer C
-			segundoGrado(A,B,C)
-		De Otro Modo:
-			Escribir "Opción no válida"
-	Fin Segun
 	
 FinAlgoritmo
